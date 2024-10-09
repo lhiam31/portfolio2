@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4e8d7;
+    color: #333;
+    min-height: 100vh;
+    background-size: cover;
+    font-family: "Oswald", sans-serif;
+}
+/* General Navigation Styling */
+nav {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px; 
+    background-color: #1E201E;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+    align-items: center; /* Center the menu items vertically */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Allow ul to take full width */
+}
+
+nav li {
+    height: 30px;
+}
+
+nav a {
+    padding: 0 20px; /* Increased horizontal padding */
+    padding-right: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px; /* Font size */
+    display: flex;
+    margin-right: 5px;
+}
+nav ul li a{
+    font-size: 25px;
+}
+nav a:hover {
+    color: #f4e8d7;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.menu-button {
+    display: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block; 
+    }
+}
+
+@media(max-width: 4000px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.sidebar {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 999;
+    height: 100vh;
+    background-color: rgba(43, 41, 41, 0.2); 
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    padding: 2rem;
+    gap: 3rem;  
+    flex-direction: row-reverse;
+    min-height: 100vh; 
+    margin-top: 50px; 
+}
+
+.intro-text {
+    text-align: left;  
+}
+
+.intro-text b {
+    display: block;      
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-left: 5px;     
+    margin-top: -10px;    
+    color: black;        
+    font-style: italic;
+}
+
+.intro-text h1 {
+    font-size: 64px;
+    margin-bottom: 0rem;
+    font-family: "Oswald", sans-serif;
+    white-space: nowrap; 
+}
+
+.intro-text i {
+    display: block;       
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-left: 5px;    
+    color: black;       
+}
+
+.intro-text h1 span {
+    color: #5B5955;
+}
+
+.profile-photo {
+    width: 425px;
+    height: 452px;
+    border-radius: 50%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' -25,
+    'opsz' 48;
+}
+
+.contact-info {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-info p {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.education {
+    margin-top: 1rem;
+    text-align: left;
+    gap: 1rem;
+}
+
+.education p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+}
+
+.education p:before {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.education ul {
+    list-style-position: inside; 
+    padding-left: 10px;
+}
+
+.education ul li {
+    margin: 1% 0;
+    line-height: 2;
+    padding-left: 10px; 
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+    }
+    .intro-text {
+        max-width: 100%;
+    }
+    .intro-text h1 {
+        font-size: 44px;  
+    }
+    .profile-photo {
+        width: 250px;
+        margin-top: 50px;
+        height: 240px;  
+    }
+    .intro-text i {
+        width: 300px;      
+        height: 16px;      
+        font-size: 16px;   
+        padding-right: 100px;
+    } 
+    .intro-text b {
+        width: 244px;       
+        height: 15px;       
+        font-size: 16px;    
+        padding-top: 2%;
+    }
+}
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 250px;
+        margin-top: 50px;
+        height: 240px;  
+    }
+}
